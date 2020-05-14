@@ -12,9 +12,10 @@
     "url": "https://github.com/satyakresna/kiss-kit"
   },
   "keywords": [
-    "kiss",
-    "starter",
-    "kit"
+    "accessible dialog",
+    "dialog",
+    "modal",
+    "accessible"
   ],
   "author": "Satya Kresna <satyakresna6295@gmail.com>",
   "license": "MIT",
