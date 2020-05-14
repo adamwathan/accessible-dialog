@@ -1,0 +1,132 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+#sidebarMenu {
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 250px;
+    z-index: 2;
+    background: white;
+    transform: translateX(-250px);
+    will-change: transform;
+}
+
+#sidebarMenu li a {
+    padding: 1rem;
+    border-top: 0;
+    border-bottom: 1px solid #ddd;
+}
+
+#sidebarMenu li a.active {
+    border-bottom: 2px solid #4299e1;
+}
+
+@media (max-width: 767px) {
+    .menu-underlay {
+        display: none;
+        background: rgba(0,0,0,0.4);
+        opacity: 1;
+        pointer-events: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100vh;
+        transition: opacity .3s cubic-bezier(0,0,.31,1);
+    }
+}
+
+@media (min-width: 768px) {
+    .sidebar-icon-toggle {
+        display: none;
+    }
+
+    #sidebarMenu {
+        position: static;
+        left: auto;
+        top: auto;
+        height: auto;
+        display: block;
+        transform: none !important;
+        transition: none !important;
+        background: none;
+        width: auto;
+        z-index: auto;
+    }
+
+    #sidebarMenu li a {
+        border: none;
+    }
+}
+
+.about {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.about h1 {
+    font-size: 1.875rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+.about h2 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.about ul {
+    list-style: circle;
+    margin-left: 1.25rem;
+}
+
+.about a {
+    text-decoration: underline;
+    text-decoration-color: blue;
+}
+
+.dialog {
+    @apply hidden;
+}
+
+.dialog.opened {
+    @apply block;
+}
+
+.dialog__window {
+    @apply inline-block;
+    @apply fixed;
+    @apply bg-white;
+    @apply rounded;
+    @apply z-1;
+    @apply p-5;
+    @apply shadow;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.dialog__mask {
+    @apply fixed;
+    @apply top-0;
+    @apply left-0;
+    @apply h-full;
+    @apply w-full;
+    @apply bg-black;
+    @apply opacity-50;
+    @apply overflow-hidden;
+}

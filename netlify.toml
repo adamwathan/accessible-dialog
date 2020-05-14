@@ -1,0 +1,9 @@
+[build]
+  publish = "dist/"
+  command = "NODE_ENV=production gulp production"
+
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200
+force = false
