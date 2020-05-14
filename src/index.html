@@ -5,52 +5,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>KISS Kit</title>
+  <title>Accessible Dialog</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.min.css">
   <script src="/js/app.js" defer></script>
 </head>
 
 <body class="bg-gray-300">
-  <div class="menu-underlay"></div>
-  <div class="flex flex-col min-h-screen">
-    <header class="p-4 flex shadow bg-white items-center">
-      <button class="header__hamburger-btn p-2 md:hidden" aria-label="Open menu">
-        <img src="/assets/icons/list.svg" alt="" class="h-6 w-6">
-      </button>
-      <a href="/" class="ml-4 md:ml-0">
-        <img src="/assets/icons/refresh.svg" alt="Refresh logo" width="50" height="50">
-      </a>
-      <nav id="sidebarMenu">
-        <div class="flex border-b border-solid border-gray-500 md:border-none p-6 -ml-2 -mt-1 md:hidden">
-          <button class="nav__hide-btn p-2 ml-auto" aria-label="Close menu">
-            <img src="/assets/icons/times.svg" alt="" class="h-6 w-6">
-          </button>
-          <!-- You can put your logo here ;) -->
-        </div>
-        <ul class="flex flex-col md:flex-row md:items-center">
-          <li>
-            <a href="/about" class="block md:inline font-bold md:mx-4 hover:bg-gray-200">
-              TENTANG
-            </a>
-          </li>
-          <li>
-            <a href="/users" class="block md:inline font-bold md:mx-4 hover:bg-gray-200">PENGGUNA</a>
-          </li>
-        </ul>
-      </nav>
-      <div class="ml-auto">
-        <a href="/login" class="font-bold hover:bg-gray-200 p-4">LOGIN</a>
-      </div>
-    </header>
-
-    <main class="flex flex-col flex-auto">
-
-    </main>
-
-    <footer class="p-4 mt-4">
-      <p class="text-black font-bold text-center">&copy; Kiss Kit 2019</p>
-    </footer>  
+  <div class="h-screen flex justify-center items-center">
+    <button class="show__dialog__btn">Show dialog</button>
   </div>
   <div class="dialog" role="dialog" aria-labelledby="dialog_title">
     <div class="dialog__window">
